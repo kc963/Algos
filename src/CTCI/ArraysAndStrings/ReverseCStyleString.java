@@ -2,15 +2,14 @@ package CTCI.ArraysAndStrings;
 
 public class ReverseCStyleString {
 
+	//Time O(n), Space O(n)
 	String reverse(String str) {
 		int idx = str.indexOf('\\') - 1;
-		System.out.println(idx);
 		char[] string = new char[str.length()];
 		int i = 0;
 		while(i < idx) {
 			string[i] = str.charAt(idx);
 			string[idx] = str.charAt(i);
-			System.out.println(string[i] + "," + string[idx]);
 			i++;
 			idx--;
 		}
